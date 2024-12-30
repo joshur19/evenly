@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Theme.Evenly" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/buttonBackground</item>  <!-- Using buttonBackground as primary color -->
+        <item name="colorPrimaryVariant">@color/buttonBackground</item> <!-- Using buttonBackground as primary variant -->
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/buttonBackground</item>  <!-- Using buttonBackground for secondary color -->
+        <item name="colorSecondaryVariant">@color/buttonBackground</item>  <!-- Variant -->
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Background and surface colors -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>  <!-- Primary variant for status bar -->
+        <item name="android:navigationBarColor">@color/buttonBackground</item>  <!-- Button background for navigation bar -->
+        <item name="android:windowBackground">@color/background</item>  <!-- Setting window background color -->
+
+        <!-- Customize the appearance of various UI elements -->
+        <item name="android:textColorPrimary">@color/primaryTextColor</item> <!-- Primary text color -->
+        <item name="android:textColor">@color/primaryTextColor</item> <!-- Default text color -->
+        <item name="android:textColorSecondary">@color/primaryTextColor</item> <!-- Secondary text color -->
+    </style>
+</resources>

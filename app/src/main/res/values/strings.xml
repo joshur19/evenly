@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">evenly</string>
+    <string-array name="cut_sizes">
+        <item>0.5x</item>
+        <item>1x</item>
+        <item>2x</item>
+    </string-array>
+</resources>

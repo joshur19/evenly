@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:weightSum="2"
+    android:layout_margin="8dp">
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="Name"
+        android:padding="8dp"
+        android:background="@android:drawable/edit_text" />
+
+    <Spinner
+        android:id="@+id/spinner_cut_size"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:entries="@array/cut_sizes"
+        android:spinnerMode="dropdown"
+        android:padding="8dp" />
+</LinearLayout>

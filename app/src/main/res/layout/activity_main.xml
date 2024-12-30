@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/background">
+
+    <!-- Title Text: Schuldenrechner -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Schuldenrechner"
+        android:textSize="20sp"
+        android:textColor="@color/titleColor"
+        android:fontFamily="@font/inter_bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Number of People Selection -->
+    <LinearLayout
+        android:id="@+id/layout_num_people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btn_decrement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:fontFamily="@font/inter_bold"
+            android:backgroundTint="@color/buttonBackground"
+            android:textColor="@android:color/white"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/tv_num_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textSize="20sp"
+            android:textColor="@color/primaryTextColor"
+            android:layout_marginHorizontal="16dp"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/inter_regular" />
+
+        <Button
+            android:id="@+id/btn_increment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:fontFamily="@font/inter_bold"
+            android:backgroundTint="@color/buttonBackground"
+            android:textColor="@android:color/white"
+            android:padding="12dp"
+            android:layout_marginStart="8dp"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <!-- Scrollable Names and Cut Sizes -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:fillViewport="true"
+        android:background="@color/background"
+        app:layout_constraintTop_toBottomOf="@id/layout_num_people"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layout_bottom">
+
+        <LinearLayout
+            android:id="@+id/container_names_and_cuts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <!-- Bottom Section: Total Amount, Button, and Results -->
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Total Amount & Paid By Input Fields -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/et_total_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="Total Amount"
+                android:inputType="numberDecimal"
+                android:background="@drawable/edittext_background"
+                android:padding="10dp"
+                android:textColor="@color/inputTextColor"
+                android:layout_marginEnd="8dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/inter_regular"/>
+
+            <EditText
+                android:id="@+id/et_paid_by"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Paid By"
+                android:background="@drawable/edittext_background"
+                android:padding="10dp"
+                android:textColor="@color/inputTextColor"
+                android:textSize="16sp"
+                android:fontFamily="@font/inter_regular"/>
+        </LinearLayout>
+
+        <!-- Calculate Button -->
+        <Button
+            android:id="@+id/btn_calculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate Split"
+            android:fontFamily="@font/inter_regular"
+            android:backgroundTint="@color/buttonBackground"
+            android:textColor="@android:color/white"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Results Display -->
+        <TextView
+            android:id="@+id/tv_results"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Results will be displayed here"
+            android:textSize="16sp"
+            android:textColor="@color/primaryTextColor"
+            android:gravity="center"
+            android:fontFamily="@font/inter_regular"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
