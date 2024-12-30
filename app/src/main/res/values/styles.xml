@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- Custom style for the Spinner dropdown -->
-    <style name="CustomSpinnerStyle">
-        <item name="android:dropDownHeight">200dp</item> <!-- Adjust height based on your layout -->
-        <item name="android:popupBackground">@android:color/white</item>
-        <item name="android:popupElevation">4dp</item> <!-- Optional: Adds a subtle shadow to the dropdown -->
-    </style>
-</resources>

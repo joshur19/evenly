@@ -12,74 +12,87 @@
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Schuldenrechner"
+        android:text="evenly."
         android:textSize="20sp"
         android:textColor="@color/titleColor"
-        android:fontFamily="@font/inter_bold"
+        android:fontFamily="@font/playwrite_au"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_num_people_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/inter_regular"
+        android:text="Number of people"
+        android:textColor="@color/titleColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
 
     <!-- Number of People Selection -->
     <LinearLayout
         android:id="@+id/layout_num_people"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_marginTop="2dp"
         android:gravity="center_vertical"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/tv_num_people_hint">
 
         <Button
             android:id="@+id/btn_decrement"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="-"
-            android:fontFamily="@font/inter_bold"
-            android:backgroundTint="@color/buttonBackground"
-            android:textColor="@android:color/white"
-            android:padding="12dp"
+            android:layout_gravity="center_vertical"
             android:layout_marginEnd="8dp"
-            android:layout_gravity="center_vertical"/>
+            android:backgroundTint="@color/buttonBackground"
+            android:fontFamily="@font/inter_bold"
+            android:padding="12dp"
+            android:text="-"
+            android:textColor="@android:color/white" />
 
         <TextView
             android:id="@+id/tv_num_people"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2"
-            android:textSize="20sp"
-            android:textColor="@color/primaryTextColor"
             android:layout_marginHorizontal="16dp"
+            android:fontFamily="@font/inter_regular"
             android:gravity="center_vertical"
-            android:fontFamily="@font/inter_regular" />
+            android:text="2"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/btn_increment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+"
-            android:fontFamily="@font/inter_bold"
-            android:backgroundTint="@color/buttonBackground"
-            android:textColor="@android:color/white"
-            android:padding="12dp"
+            android:layout_gravity="center_vertical"
             android:layout_marginStart="8dp"
-            android:layout_gravity="center_vertical"/>
+            android:backgroundTint="@color/buttonBackground"
+            android:fontFamily="@font/inter_bold"
+            android:padding="12dp"
+            android:text="+"
+            android:textColor="@android:color/white" />
     </LinearLayout>
 
     <!-- Scrollable Names and Cut Sizes -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:fillViewport="true"
         android:background="@color/background"
-        app:layout_constraintTop_toBottomOf="@id/layout_num_people"
-        app:layout_constraintStart_toStartOf="parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/layout_bottom"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/layout_bottom">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_num_people">
 
         <LinearLayout
             android:id="@+id/container_names_and_cuts"
@@ -104,8 +117,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="16dp">
+            android:gravity="center_vertical">
 
             <EditText
                 android:id="@+id/et_total_amount"
@@ -134,6 +146,49 @@
                 android:fontFamily="@font/inter_regular"/>
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/container_paid_by"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:id="@+id/layout_paid_by_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_add_paid_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Paid By"
+                android:fontFamily="@font/inter_regular"
+                android:backgroundTint="@color/buttonBackground"
+                android:textColor="@android:color/white"
+                android:padding="12dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btn_rem_paid_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove Paid By"
+                android:fontFamily="@font/inter_regular"
+                android:backgroundTint="@color/buttonBackground"
+                android:textColor="@android:color/white"
+                android:padding="12dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+
         <!-- Calculate Button -->
         <Button
             android:id="@+id/btn_calculate"
@@ -151,7 +206,7 @@
             android:id="@+id/tv_results"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Results will be displayed here"
+            android:text=""
             android:textSize="16sp"
             android:textColor="@color/primaryTextColor"
             android:gravity="center"
