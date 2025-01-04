@@ -15,6 +15,7 @@
         android:hint="@string/name_cut_row_label"
         android:padding="8dp"
         android:background="@drawable/edittext_background"
+        android:textColorHint="#808080"
         android:importantForAutofill="no"
         android:inputType="text"/>
 
@@ -25,5 +26,6 @@
         android:layout_weight="1"
         android:entries="@array/cut_sizes"
         android:spinnerMode="dropdown"
+        android:popupBackground="@color/white"
         android:padding="8dp" />
 </LinearLayout>
