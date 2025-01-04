@@ -12,14 +12,16 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:hint="Name"
+        android:hint="@string/name_cut_row_label"
         android:padding="8dp"
-        android:background="@android:drawable/edit_text" />
+        android:background="@drawable/edittext_background"
+        android:importantForAutofill="no"
+        android:inputType="text"/>
 
     <Spinner
         android:id="@+id/spinner_cut_size"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_weight="1"
         android:entries="@array/cut_sizes"
         android:spinnerMode="dropdown"

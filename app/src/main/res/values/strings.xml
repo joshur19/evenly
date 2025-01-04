@@ -1,8 +1,32 @@
 <resources>
     <string name="app_name">evenly</string>
+
     <string-array name="cut_sizes">
         <item>0.5x</item>
         <item>1x</item>
         <item>2x</item>
     </string-array>
+
+    <!-- Screen Title -->
+    <string name="screen_title">evenly.</string>
+
+    <!-- Hints and Labels -->
+    <string name="hint_num_people">Number of people</string>
+    <string name="hint_total_amount">Total Amount</string>
+    <string name="hint_paid_by">Paid By</string>
+
+    <!-- Buttons -->
+    <string name="btn_decrement">-</string>
+    <string name="btn_increment">+</string>
+    <string name="btn_add_paid_by">Add Paid By</string>
+    <string name="btn_remove_paid_by">Remove Paid By</string>
+    <string name="btn_calculate_split">Calculate Split</string>
+
+    <!-- Accessibility Descriptions -->
+    <string name="desc_people_list">The people involved in the bill split are listed here.</string>
+
+    <!-- Dynamic inflated rows -->
+    <string name="paid_by_amount_hint">Total Amount</string>
+    <string name="paid_by_name_hint">Paid By</string>
+    <string name="name_cut_row_label">Name</string>
 </resources>

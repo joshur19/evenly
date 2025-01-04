@@ -9,26 +9,29 @@ android:layout_marginBottom="16dp">
 <EditText
     android:id="@+id/et_total_amount"
     android:layout_width="0dp"
-    android:layout_height="wrap_content"
+    android:layout_height="48dp"
     android:layout_weight="2"
-    android:hint="Total Amount"
+    android:hint="@string/paid_by_amount_hint"
     android:inputType="numberDecimal"
     android:background="@drawable/edittext_background"
     android:padding="10dp"
     android:textColor="@color/inputTextColor"
     android:layout_marginEnd="8dp"
     android:textSize="16sp"
-    android:fontFamily="@font/inter_regular"/>
+    android:fontFamily="@font/inter_regular"
+    android:importantForAutofill="no"/>
 
 <EditText
     android:id="@+id/et_paid_by"
     android:layout_width="0dp"
-    android:layout_height="wrap_content"
+    android:layout_height="48dp"
     android:layout_weight="1"
-    android:hint="Paid By"
+    android:hint="@string/paid_by_name_hint"
     android:background="@drawable/edittext_background"
     android:padding="10dp"
     android:textColor="@color/inputTextColor"
     android:textSize="16sp"
-    android:fontFamily="@font/inter_regular"/>
+    android:fontFamily="@font/inter_regular"
+    android:inputType="text"
+    android:importantForAutofill="no"/>
 </LinearLayout>
